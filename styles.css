@@ -1,0 +1,69 @@
+body, html {
+    height: 100%
+}
+
+
+/* The Navigation Bar */
+#navbar {
+    background-color: white;
+    overflow:hidden;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+}
+
+/* Style the logo & links inside the navigation bar */
+.logo {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-size: auto 43px;
+    background-image: url("./img/MuddyPawsLogo.png");
+    background-repeat: no-repeat;
+    float: left;
+    padding-right: 30px;
+    top: 50%;
+}
+
+/* Style the links instead hte nav bar */
+
+.nav-menu a {
+    float: left;
+    display: inline-block;
+    color: gray;
+    text-align: center;
+    padding:14px 16px;
+    text-transform: uppercase;
+}
+
+.cart-menu a {
+    float: right;
+    display: block;
+    color: gray;
+    text-align: center;
+    padding:14px 16px;
+    text-transform: uppercase;
+}
+
+
+/* The hero image */
+#hero-panel {
+    /* The image used */
+    background-image: url("./img/HomeHero.png");
+
+    /* Set a specific height */
+    height: 50%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 540px;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: left;
+    color: white;
+}
