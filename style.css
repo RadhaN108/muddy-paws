@@ -27,9 +27,14 @@ h2 {
     padding: 0px 0px 10px;
 }
 
-p {
+h3 {
     font-size: 18px;
     line-height: 25px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .button-large {
@@ -37,6 +42,7 @@ p {
     font-size: 16px;
     letter-spacing: 1px;
     color: white;
+    display: inline-block;
     margin: 30px 0px;
     padding: 10px 20px;
     border: 3px solid white;
@@ -87,7 +93,7 @@ p {
     margin-right: 10px;
 }
 
-.menu a {
+.pages a, .buy-menu a {
     display: inline-block;
     font-size: 18px;
     font-weight: 700;
@@ -101,27 +107,53 @@ p {
 }
 
 
-
-
 /********** HERO PANEL **********/
 
-.hero-image {
-    background-image: url(img/HomeHero.png);
+.home-hero {
     height: 700px;
+    background-color: #F7EA46;
+    background-image: url(img/HomeHero.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-.hero-text {
+.home-hero div {
     color: white;
     position: relative;
     width: 40%;
-    top: 30%;
+    top: 25%;
     left: 10%;
 }
 
+.secondary-hero {
+    height: 250px;
+    background-color: #F7EA46;
+    background-image: url("img/dogowner.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.secondary-hero div {
+    color: black;
+    position: relative;
+    width: 25%;
+    top: 10%;
+    left: 5%;
+}
+
+.secondary-hero h1 {
+    margin-bottom: 15px;
+}
+
+.arrow {
+    margin: 0 50%;
+    position: relative;
+    top: 350px;
+}
 
 /*********** STORIES PANEL ***********/
 
@@ -223,10 +255,69 @@ p {
 }
 
 .viewall {
-    padding: 30px 0px 0px;
+    display: inline-block;
+    margin-top: 30px;
     text-align: center;
     text-decoration: underline;
 }
+
+.viewall:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/*********** PRODUCTS INDEX ********/
+.product-container {
+    display:flex;
+    justify-content: space-around;
+    height: 382px;
+}
+
+.product-container a {
+    display:inline-block;
+    height: 250px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.product-container a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.product-info {
+    position: relative;
+    top: 100%;
+}
+
+.dog-harness {
+    background-image: url("img/cat-harness.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cat-harness {
+    background-image: url("img/dog-harness.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.harness-attachments {
+    background-image: url("img/harness-attachment.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gps-tracker {
+    background-image: url("img/gps-collar.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /************ FOOTER ***************/
 .footer {
