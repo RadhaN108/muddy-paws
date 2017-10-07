@@ -170,12 +170,12 @@ p {
 .cta-container {
     display: flex;
     justify-content: center;
-    background: #FFFCCB;
+    background: #F7EA46;
 }
 
 .cta {
     width: 90%;
-    padding: 20px 50px;
+    padding: 30px 50px 50px;
     text-align: center;
 }
 
@@ -183,17 +183,43 @@ p {
     display: flex;
     justify-content: space-around;
     padding: 0px 200px;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .category {
     width: 40%;
-    background: grey;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 20px 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.category:hover {
+    cursor: pointer;
+    background: black;
+    color: lightgrey;
 }
 
 .viewall {
     padding: 30px 0px 0px;
     text-align: center;
     text-decoration: underline;
+}
+
+/************ FOOTER ***************/
+.footer {
+    background:grey;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.footer-item {
+    padding: 10px 10px;
+    color: white;
+    text-align: center;
 }
