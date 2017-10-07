@@ -1,12 +1,17 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Cabin', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', 'sans-serif';
 }
 
 body, html {
     height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /***** STYLE GUIDE *******/
@@ -60,29 +65,42 @@ p {
   justify-content: space-between;
 }
 
-.nav-menu {
+.main-menu {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    max-width: 150px;
+    margin: 0 30px;
+}
+
+.pages {
     display:flex;
     justify-content:flex-start;
+
 }
 
 .buy-menu {
     display:flex;
     justify-content: flex-end;
+    margin-right: 10px;
 }
 
-.menu div {
-    margin: 0 20px;
-    text-transform: uppercase;
+.menu a {
+    display: inline-block;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
+    padding: 10px 20px;
 }
 
-.logo img {
-    max-width: 150px;
-    margin: 0;
-
+.menu a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
 }
+
+
 
 
 /********** HERO PANEL **********/
