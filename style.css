@@ -34,6 +34,7 @@ h2 {
 h3 {
     font-size: 18px;
     line-height: 25px;
+    letter-spacing: .5px;
 }
 
 p {
@@ -193,17 +194,29 @@ p {
     align-items: center;
 }
 
-.story-cover {
+.cover {
     width: 400px;
     height: 300px;
     background: grey;
-    background-image:url(img/catpack.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.story-cover1 {
+    background-image:url(img/deisel.jpg);
+}
+
+.story-cover2 {
+    background-image:url(img/catpack.jpg);
+}
+
+.story-cover3 {
+    background-image:url(img/greendog.jpg);
+}
+
 .outline {
+    display:inline-block;
     padding: 15px;
     border: 3px solid #F6A623;
 }
@@ -217,6 +230,18 @@ p {
     top: -10%;
     padding: 10px;
     margin: 10px;
+}
+
+.story-type {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700px;
+    letter-spacing: .5px
+}
+
+.date {
+    font-style: italic;
+    font-size: 14px;
 }
 
 .outline:hover {
@@ -453,22 +478,22 @@ p {
     background-size: cover;
 }
 
-.product-images .packthumb {
+.product-images .gpsthumb {
     background-image: url("img/collar-hero.png");
     border: #F7EA46 4px solid;
     opacity: 0.7;
 }
 
-.packthumb1 {
-    background-image: url("img/pack1.jpg");
+.gpsthumb1 {
+    background-image: url("img/gps-collar.png");
 }
 
-.packthumb2 {
-    background-image: url("img/pack2.jpg");
+.gpsthumb2 {
+    background-image: url("img/gps-collar1.png");
 }
 
-.packthumb3 {
-    background-image: url("img/pack3.jpg");
+.gpsthumb3 {
+    background-image: url("img/gps-collar2.png");
 }
 
 
