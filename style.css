@@ -62,7 +62,7 @@ p {
     color: black;
 }
 
-/******* MENU & HERO ********/
+/******* NAVIGATION ********/
 header {
   background: #fff;
   width: 100%;
@@ -114,25 +114,28 @@ nav a:hover, .back-bar a:hover {
     padding: 10px 40px;
 }
 
-/********** HERO PANEL **********/
+/********** HERO **********/
 
 .home-hero {
     height: 700px;
-    background-color: #F7EA46;
-    background-image: url(img/HomeHero.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #F7EA46 url(img/HomeHero.png) center no-repeat;
     background-size: cover;
     position: relative;
     border-top: #F7EA46 25px solid;
 }
 
+/* hero text & arrow img*/
 .home-hero div {
     color: white;
     position: relative;
     width: 40%;
-    top: 25%;
-    left: 10%;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.home-hero img {
+    margin: 10% auto;
+    display: block;
 }
 
 .secondary-hero {
@@ -142,7 +145,6 @@ nav a:hover, .back-bar a:hover {
     background-position: right;
     background-repeat: no-repeat;
     position: relative;
-
 }
 
 .secondary-hero div {
@@ -157,11 +159,7 @@ nav a:hover, .back-bar a:hover {
     margin-bottom: 15px;
 }
 
-.arrow {
-    margin: 0 50%;
-    position: relative;
-    top: 350px;
-}
+
 
 /*********** STORIES PANEL ***********/
 
