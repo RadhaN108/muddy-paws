@@ -62,51 +62,49 @@ p {
     color: black;
 }
 
-/****** MENU HEADER ********/
-.menu-container {
-  color: black;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
+/******* MENU & HERO ********/
+header {
+  background: #fff;
+  width: 100%;
+  clear: both;
 }
 
-.menu {
-  width: 100%;
+/* float pages main nav left and cart nav right */
+header nav {
+  background: #fff;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-menu {
+/* style main nav list items */
+nav ul,
+nav ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
     display:flex;
-    justify-content: flex-start;
+    align-items: center;
 }
 
-.logo img {
+nav ul li {
+    margin-right: 40px;
+}
+
+/* logo */
+nav ul li:first-child img{
+    display: block;
+    width: 100%;
+    height: auto;
     max-width: 150px;
-    margin: 0 30px;
 }
 
-.pages {
-    display:flex;
-    justify-content:flex-start;
-
-}
-
-.buy-menu {
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 10px;
-}
-
-.pages a, .buy-menu a {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-}
-
-.menu a:hover, .back-bar a:hover {
+/* hover states */
+nav a:hover, .back-bar a:hover {
     text-decoration: underline;
     opacity: 0.7;
 }
