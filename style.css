@@ -9,20 +9,7 @@ body, html {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-a.active {
-    text-decoration: underline;
-}
-
-/***** STYLE GUIDE *******/
+/******* STYLE GUIDE *******/
 h1 {
     font-family: 'Roboto Condensed', 'sans-serif';
     font-size: 64px;
@@ -50,6 +37,19 @@ h4 {
 p {
     font-size: 14px;
     line-height: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a.active {
+    text-decoration: underline;
 }
 
 .button-large {
@@ -118,7 +118,8 @@ nav a:hover, .back-bar a:hover {
     opacity: 0.7;
 }
 
-.back-bar {
+/* 'back' for tertiary pages */
+.back-nav {
     background: lightgrey;
     padding: 10px 40px;
 }
@@ -273,200 +274,87 @@ nav a:hover, .back-bar a:hover {
 }
 
 
-/*********** PRODUCTS INDEX ********/
-.product-container {
+/*********** PRODUCTS INDEX PANEL ********/
+
+
+.product-panel {
+    width: 100%;
     display:flex;
     justify-content: space-around;
-    height: 382px;
+    height: 390px;
 }
 
-.product-container a {
+/* style individual product instance */
+.product-panel a {
     display:inline-block;
     height: 250px;
     width: 250px;
     margin-top: 10px;
+    background: grey center no-repeat;
+    background-size: cover;
+
 }
 
-.product-container a:hover {
+.product-panel a:hover {
     opacity: 0.7;
 }
 
-.product-info {
+/* title and price for product */
+.product-panel a div {
     position: relative;
-    top: 100%;
+    padding-top: 250px;
 }
 
-.dog-harness {
-    background-image: url("img/dog-harness.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.cat-harness {
-    background-image: url("img/cat-harness.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.harness-attachments {
-    background-image: url("img/pack.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.gps-tracker {
-    background-image: url("img/gps-collar.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/********** PRODUCT DETAILS **********/
-.spec-container {
+/********** PRODUCT DETAIL PANEL  **********/
+.product-detail-panel {
     display: flex;
+    justify-content: flex-start;
     height: 700px;
-}
-.product-images, .product-desc {
-    margin: 40px 50px 0px;
+    padding: 40px 50px;
 }
 
+/* style left image section */
 .product-images {
     width: 50%;
+    margin-right: 50px
 }
 
+.display-image {
+    height: 419px;
+}
+
+.display-image,
+.product-images a {
+    background: center no-repeat;
+    background-size: cover;
+}
+
+/* style product thumbnails */
 .thumbnails {
     display: flex;
     justify-content: space-around;
 }
 
-.product-images a {
+.thumbnails a {
     display: inline-block;
     height: 129px;
     width: 100%;
     margin: 30px 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border: grey 1px solid;
 }
 
-.product-images a:hover {
+.thumbnails a:hover {
     opacity: 0.7;
 }
 
-.product-images .dogselected {
-    height: 419px;
-    background-image: url('img/dog-harness-hero.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/** Images for Cat Harness Product Page **/
-.product-images .dogthumb {
-    background-image: url("img/dog-harness-hero.jpg");
+/* active state for selected thumbnail */
+.thumbnails a.active {
     border: #F7EA46 4px solid;
     opacity: 0.7;
 }
 
-.dogthumb1 {
-    background-image: url("img/dog-harness.png");
-}
-
-.dogthumb2 {
-    background-image: url("img/dog-harness-3.jpg");
-}
-
-.dogthumb3 {
-    background-image: url("img/dog-harness-4.jpg");
-}
-
-/** Images for Cat Harness Product Page **/
-.product-images .catselected {
-    height: 419px;
-    background-image: url("img/catgrass.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.product-images .catthumb {
-    background-image: url("img/catgrass.jpg");
-    border: #F7EA46 4px solid;
-    opacity: 0.7;
-}
-
-.catthumb1 {
-    background-image: url("img/cat-harness0.jpg");
-}
-
-.catthumb2 {
-    background-image: url("img/cat-harness2.jpg");
-}
-
-.catthumb3 {
-    background-image: url("img/cat-harness1.jpg");
-}
-
-
-/** Images for Harness Attachement **/
-.product-images .packselected {
-    height: 419px;
-    background-image: url("img/pack-hero.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.product-images .packthumb {
-    background-image: url("img/pack-hero.jpg");
-    border: #F7EA46 4px solid;
-    opacity: 0.7;
-}
-
-.packthumb1 {
-    background-image: url("img/pack1.jpg");
-}
-
-.packthumb2 {
-    background-image: url("img/pack2.jpg");
-}
-
-.packthumb3 {
-    background-image: url("img/pack3.jpg");
-}
-
-
-/** Images for GPS Tracker Collar **/
-.product-images .gpsselected {
-    height: 419px;
-    background-image: url("img/collar-hero.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.product-images .gpsthumb {
-    background-image: url("img/collar-hero.png");
-    border: #F7EA46 4px solid;
-    opacity: 0.7;
-}
-
-.gpsthumb1 {
-    background-image: url("img/gps-collar.png");
-}
-
-.gpsthumb2 {
-    background-image: url("img/gps-collar1.png");
-}
-
-.gpsthumb3 {
-    background-image: url("img/gps-collar2.png");
-}
-
-
+/* styling right product description area */
 .product-desc {
     width: 25%;
 }
@@ -475,36 +363,38 @@ nav a:hover, .back-bar a:hover {
     padding-bottom: 0px;
 }
 
-.product-desc p{
+.product-desc p {
     position: relative;
-    top: 5%;
+    margin-top: 20px;
     line-height: 20px;
 }
 
+/* size and color dropdowns */
 select {
     position: relative;
-    top: 50px;
     margin: 20px 0px;
     display: block;
-    padding: 10px 70px 10px 13px !important;
-    max-width: 100%; height: auto !important;
+    padding: 10px 70px 10px 13px;
+    max-width: 100%; height: auto;
     border: 1px solid #e3e3e3;
     border-radius: 3px;
     background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png") right center no-repeat;
     background-color: #fff; color: #444444; font-size: 12px;
-    line-height: 16px !important;
-    appearance: none; /* this is must */
+    line-height: 16px;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
+/* add to cart button */
 .buy-button {
+    display: inline-block;
     padding: 15px 50px;
+    margin-top: 10px;
     color: black;
     background-color: #F7EA46;
     border-radius: 5px;
     position: relative;
-    top: 70px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;

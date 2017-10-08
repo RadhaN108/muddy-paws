@@ -21,32 +21,32 @@
                 <li><a href="#" class="cart">Cart</a></li>
             </ul>
         </nav>
+        <section class="back-nav">
+            <a href="product-index.html"><h3><< back to all products</h3></a>
+        </section>
     </header>
-    <div class="back-bar">
-        <a href="product-index.html"><h3><< back to all products</h3></a>
-    </div>
-    <div class="spec-container">
+    <section class="product-detail-panel">
         <div class="product-images">
-            <div class="catselected"></div>
+            <div class="display-image" style="background-image: url(img/catgrass.jpg)"></div>
             <div class="thumbnails">
-                <a class="catthumb"></a>
-                <a class="catthumb1"></a>
-                <a class="catthumb2"></a>
-                <a class="catthumb3"></a>
+                <a href="#" class="active" style="background-image: url(img/catgrass.jpg)"></a>
+                <a href="#" style="background-image: url(img/cat-harness0.jpg)"></a>
+                <a href="#" style="background-image: url(img/cat-harness2.jpg)"></a>
+                <a href="#" style="background-image: url(img/cat-harness1.jpg)"></a>
             </div>
         </div>
         <div class="product-desc">
             <h2>Cat Harness</h2>
             <h3>$32</h3>
             <p>The Front Range Cat Harness is an everyday harness that is easy to put on and comfortable for cats to wear. The harness features two leash attachment points: an aluminum V-ring centered on the dog's back for everyday walks, and reinforced webbing at the cat's chest for training or additional control. </p>
-            <select required class="size-select">
+            <select required>
                 <option value="" disabled selected>Select size</option>
                 <option value="tiny">Tiny</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
                 <option value="Large">Large</option>
             </select>
-            <select required class="color-select">
+            <select required>
                 <option value="" disabled selected>Select color</option>
                 <option value="strawberry">Strawberry</option>
                 <option value="blackberry">Blackberry</option>
@@ -57,7 +57,7 @@
             </select>
             <a class="buy-button">Add to Cart</a>
         </div>
-    </div>
+    </section>
     <footer>
         <a href="#">Fit Guide</a>
         <a href="#">Shipping & Returns</a>

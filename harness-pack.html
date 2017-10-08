@@ -21,32 +21,32 @@
                 <li><a href="#" class="cart">Cart</a></li>
             </ul>
         </nav>
+        <section class="back-nav">
+            <a href="product-index.html"><h3><< back to all products</h3></a>
+        </section>
     </header>
-    <div class="back-bar">
-        <a href="product-index.html"><h3><< back to all products</h3></a>
-    </div>
-    <div class="spec-container">
+    <section class="product-detail-panel">
         <div class="product-images">
-            <div class="packselected"></div>
+            <div class="display-image" style="background-image: url(img/pack-hero.jpg)"></div>
             <div class="thumbnails">
-                <a class="packthumb"></a>
-                <a class="packthumb1"></a>
-                <a class="packthumb2"></a>
-                <a class="packthumb3"></a>
+                <a href="#" class="active" style="background-image: url(img/pack-hero.jpg)"></a>
+                <a href="#" style="background-image: url(img/pack1.jpg)"></a>
+                <a href="#" style="background-image: url(img/pack2.jpg)"></a>
+                <a href="#" style="background-image: url(img/pack3.jpg)"></a>
             </div>
         </div>
         <div class="product-desc">
             <h2>Harness Attachment</h2>
             <h3>$38</h3>
             <p>The Harness Attachement Pack is a sleek, low-profile hydration pack. Featuring two on-board, collapsible water bottles, dogs stay hydrated for the long haul. Two external stash pockets fit other adventure essentials.</p>
-            <select required class="size-select">
+            <select required>
                 <option value="" disabled selected>Select size</option>
                 <option value="tiny">Tiny</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
                 <option value="Large">Large</option>
             </select>
-            <select required class="color-select">
+            <select required>
                 <option value="" disabled selected>Select color</option>
                 <option value="strawberry">Strawberry</option>
                 <option value="blackberry">Blackberry</option>
@@ -57,7 +57,7 @@
             </select>
             <a class="buy-button">Add to Cart</a>
         </div>
-    </div>
+    </section>
     <footer>
         <a href="#">Fit Guide</a>
         <a href="#">Shipping & Returns</a>
