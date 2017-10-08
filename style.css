@@ -327,31 +327,40 @@ nav a:hover, .back-bar a:hover {
 }
 
 .display-image,
-.product-images a {
+.product-images ul li a {
     background: center no-repeat;
     background-size: cover;
 }
 
 /* style product thumbnails */
-.thumbnails {
-    display: flex;
-    justify-content: space-around;
+.product-images ul,
+.product-images ul li {
+    list-style: none;
 }
 
-.thumbnails a {
-    display: inline-block;
+.product-images ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-images ul li {
+    }
+
+.product-images ul li a {
+    display: block;
     height: 129px;
-    width: 100%;
+    width: 129px;
     margin: 30px 10px;
     border: grey 1px solid;
 }
 
-.thumbnails a:hover {
+.product-images ul li a:hover {
     opacity: 0.7;
 }
 
 /* active state for selected thumbnail */
-.thumbnails a.active {
+.product-images a.active {
     border: #F7EA46 4px solid;
     opacity: 0.7;
 }
