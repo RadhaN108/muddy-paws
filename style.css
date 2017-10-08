@@ -516,14 +516,14 @@ select {
 
 
 /************ FOOTER ***************/
-.footer {
+footer {
     background:grey;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
-    padding: 10px 20px;
 }
 
-.footer-item {
+footer a {
     padding: 10px 10px;
     color: white;
     text-align: center;
