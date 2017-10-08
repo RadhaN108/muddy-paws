@@ -235,30 +235,36 @@ nav a:hover, .back-bar a:hover {
     display: flex;
     flex-direction: column;
     background: #F7EA46;
-    padding: 30px 50px 50px;
+    padding: 30px 50px 40px;
     text-align: center;
 }
 
-.cta div {
+.cta ul {
     display: flex;
     justify-content: space-around;
-    padding: 0px 200px;
+    padding: 0px 250px;
     margin-top: 20px;
 }
 
-.cta div a {
+.cta ul li {
+    list-style: none;
+    margin: 0;
+    display: block;
+}
+
+.cta ul li a {
     width: 40%;
     background: transparent;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 20px 10px;
+    padding: 20px 150px;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 2px;
     color: black;
 }
 
-.cta div a:hover {
+.cta ul li a:hover {
 
     background: black;
     color: #F7EA46;
@@ -266,7 +272,7 @@ nav a:hover, .back-bar a:hover {
 
 .cta .viewall {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
     text-decoration: underline;
 }
