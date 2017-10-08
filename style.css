@@ -37,6 +37,12 @@ h3 {
     letter-spacing: .5px;
 }
 
+h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
 p {
     font-size: 14px;
     line-height: 16px;
@@ -153,85 +159,68 @@ nav a:hover, .back-bar a:hover {
 
 /*********** STORIES PANEL ***********/
 
-.story-container {
+/* introduction */
+.story-intro {
     display: flex;
     justify-content: center;
-    padding: 70px  0px 140px;
+    padding: 50px 0px 80px;
     background: #F1F1F1;
 }
 
-.story-intro {
+.story-intro div {
      color: black;
      text-align: center;
      width: 50%;
 }
 
+/* three featured stories */
 .stories {
     display: flex;
     justify-content: space-around;
-    padding: 0px 50px 0px;
+    padding: 0px 50px 50px;
     position: relative;
-    top: -10%;
 }
 
-.story-instance {
+.stories::before{
+    display:block;
+    content: '';
+    width: 100%;
+    position: absolute;
+    background: #F1F1F1;
+    height: 100px;
+    z-index: 0
+}
+
+.stories div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .cover {
     width: 400px;
     height: 300px;
-    background: grey;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: grey center no-repeat;
     background-size: cover;
 }
 
-.story-cover1 {
-    background-image:url(img/deisel.jpg);
+.details {
+    width: 60%;
+    background: white;
+    position: relative;
+    top: -10%;
+    padding: 10px;
 }
 
-.story-cover2 {
-    background-image:url(img/catpack.jpg);
-}
-
-.story-cover3 {
-    background-image:url(img/greendog.jpg);
-}
-
-.outline {
-    display:inline-block;
+.stories a {
+    display: inline-block;
     padding: 15px;
     border: 3px solid #F6A623;
 }
 
-.story-meta {
-    width: 60%;
-    background: white;
-    color: black;
-    text-align: left;
-    position: relative;
-    top: -10%;
-    padding: 10px;
-    margin: 10px;
-}
-
-.story-type {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700px;
-    letter-spacing: .5px
-}
-
-.date {
-    font-style: italic;
-    font-size: 14px;
-}
-
-.outline:hover {
-    border: 3px solid #F8E81C;
+.stories a:hover {
+    border: 3px solid #F7EA46;
     cursor: pointer;
 }
 
