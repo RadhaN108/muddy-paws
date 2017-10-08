@@ -14,6 +14,10 @@ a {
     color: black;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 a.active {
     text-decoration: underline;
 }
@@ -59,7 +63,6 @@ p {
     border: 3px solid white;
     border-radius: 10px;
     background: transparent;
-    cursor:pointer;
 }
 
 .button-large:hover {
@@ -221,31 +224,26 @@ nav a:hover, .back-bar a:hover {
 
 .stories a:hover {
     border: 3px solid #F7EA46;
-    cursor: pointer;
 }
 
-/************ PRODUCTS PANEL ************/
-
-.cta-container {
-    display: flex;
-    justify-content: center;
-    background: #F7EA46;
-}
+/************ CTA ************/
 
 .cta {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: #F7EA46;
     padding: 30px 50px 50px;
     text-align: center;
 }
 
-.categories {
+.cta div {
     display: flex;
     justify-content: space-around;
     padding: 0px 200px;
     margin-top: 20px;
 }
 
-.category {
+.cta div a {
     width: 40%;
     background: transparent;
     border: 2px solid black;
@@ -257,22 +255,21 @@ nav a:hover, .back-bar a:hover {
     color: black;
 }
 
-.category:hover {
-    cursor: pointer;
+.cta div a:hover {
+
     background: black;
-    color: lightgrey;
+    color: #F7EA46;
 }
 
-.viewall {
+.cta .viewall {
     display: inline-block;
     margin-top: 30px;
     text-align: center;
     text-decoration: underline;
 }
 
-.viewall:hover {
+.cta .viewall:hover {
     opacity: 0.5;
-    cursor: pointer;
 }
 
 
@@ -292,7 +289,6 @@ nav a:hover, .back-bar a:hover {
 
 .product-container a:hover {
     opacity: 0.7;
-    cursor: pointer;
 }
 
 .product-info {
@@ -358,7 +354,6 @@ nav a:hover, .back-bar a:hover {
 
 .product-images a:hover {
     opacity: 0.7;
-    cursor: pointer;
 }
 
 .product-images .dogselected {
@@ -517,7 +512,6 @@ select {
 
 .buy-button:hover {
     opacity: 0.7;
-    cursor: pointer;
 }
 
 
