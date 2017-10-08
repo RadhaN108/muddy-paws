@@ -116,6 +116,7 @@ nav a:hover, .back-bar a:hover {
 
 /********** HERO **********/
 
+/* home hero styles */
 .home-hero {
     height: 700px;
     background: #F7EA46 url(img/HomeHero.png) center no-repeat;
@@ -124,7 +125,6 @@ nav a:hover, .back-bar a:hover {
     border-top: #F7EA46 25px solid;
 }
 
-/* hero text & arrow img*/
 .home-hero div {
     color: white;
     position: relative;
@@ -138,27 +138,17 @@ nav a:hover, .back-bar a:hover {
     display: block;
 }
 
+/* secondary hero styles */
 .secondary-hero {
     height: 250px;
-    background-color: #F7EA46;
-    background-image: url("img/dogowner.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
-    position: relative;
+    background: #F7EA46 url("img/dogowner.jpg") right no-repeat;
 }
 
 .secondary-hero div {
     color: black;
-    position: relative;
     width: 25%;
-    top: 10%;
-    left: 5%;
+    padding: 20px 0 0 25px;
 }
-
-.secondary-hero h1 {
-    margin-bottom: 15px;
-}
-
 
 
 /*********** STORIES PANEL ***********/
