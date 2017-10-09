@@ -427,6 +427,28 @@ input[type=submit] {
 
 }
 
+/*********** ABOUT ***************/
+.about {
+    border-top: #F7EA46 25px solid;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    height: 680px;
+}
+
+/* style about image */
+.about div:first-child {
+    height: 350px;
+    width: 600px;
+    background: grey no-repeat center;
+    background-size: cover;
+}
+
+/* style text */
+.about div:last-child {
+    width: 40%;
+}
+
 /************ FOOTER ***************/
 footer ul{
     background:grey;
