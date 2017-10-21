@@ -62,6 +62,7 @@ var docReady = () => {
             html += "<tr class='item'><td><div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg)''></div><h3>" + name +"</h3></td><td><p>Color:  " + color + "</p><p>Size:  " + size + "</p></td><td><p>" + count + "</p></td><td><a href='#'>modify item</a><a href='#'>remove item</a></td></tr>";
 
             // update the number of items in the cart menu item
+            var cartMenuItem = $(".cart");
             cartMenuItem.html("Cart (" + numItems + ")");
             console.log(cartMenuItem);
         }
