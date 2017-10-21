@@ -455,6 +455,23 @@ input[type=submit] {
     flex-direction: column;
 }
 
+.cart-panel .button {
+    border: 0;
+    display: inline-block;
+    padding: 15px 50px;
+    margin: 40px 500px 0px;
+    color: black;
+    background-color: #F7EA46;
+    border-radius: 5px;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 
 /*********** ABOUT ***************/
 .about {

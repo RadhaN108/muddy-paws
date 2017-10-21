@@ -8,6 +8,8 @@
     <!-- FONTS !-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- JQuery File !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- JS File !-->
     <script src="script.js"></script>
   </head>
@@ -43,14 +45,14 @@
             <h3>$32</h3>
             <p>The Front Range Cat Harness is an everyday harness that is easy to put on and comfortable for cats to wear. The harness features two leash attachment points: an aluminum V-ring centered on the dog's back for everyday walks, and reinforced webbing at the cat's chest for training or additional control. </p>
             <form>
-                <select required>
+                <select class="size" required>
                     <option value="" disabled selected>Select size</option>
                     <option value="tiny">Tiny</option>
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <select required>
+                <select class="color" required>
                     <option value="" disabled selected>Select color</option>
                     <option value="strawberry">Strawberry</option>
                     <option value="blackberry">Blackberry</option>
@@ -59,7 +61,7 @@
                     <option value="night moon">Night Moon</option>
                     <option value="fire orange">Fire Orange</option>
                 </select>
-                <input type="Submit" value="Add to Cart"/>
+                <input class="add-to-cart" type="Submit" value="Add to Cart" data-name="Cat-Harness" data-price="32"/>
             </form>
         </div>
     </section>
