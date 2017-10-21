@@ -433,30 +433,51 @@ input[type=submit] {
 }
 
 .cart-panel table {
-    width: 90%;
-    height: 200px;
-    padding: 30px;
+    width: 80%;
+    border-collapse: collapse;
 }
 
 .cart-panel table tr th {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 1px;
+    height: 40px;
+    width: 30%;
+    padding: 20px;
 }
 
+.cart-panel table td {
+    padding: 20px;
+}
 
 .cart-panel table tr td:first-child {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.cart-panel table tr td:last-child a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.cart-panel table .line-item {
+    border: 1px solid black;
+}
+
+
 
 .cart-product-image {
     background: center no-repeat;
     background-size: cover;
     width: 100px;
     height: 100px;
+    margin-right: 30px;
+    border: 1px solid black;
 }
-
 
 .cart-panel .button {
     border: 0;
