@@ -479,7 +479,7 @@ input[type=submit] {
     border: 1px solid black;
 }
 
-.cart-panel .button {
+.cart-panel .check-out {
     border: 0;
     display: inline-block;
     padding: 15px 50px;

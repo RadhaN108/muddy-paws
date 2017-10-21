@@ -46,10 +46,14 @@ var docReady = () => {
     ///// show items in cart
     // get the cartTable on the cart page
     var cartTable = $("#cart-table");
+    var checkOutButton = $(".check-out");
     var html = "";
+
     // if there's no items in the cart, don't do anything
     if (numItems == 0) {
         console.log('cart is empty');
+        checkOutButton.hide();
+        cartTable.hide();
     } else { // if there are items in the cart, then add the rows to the cart page
         for (var i in cart) {
             // get data for each line item
@@ -65,6 +69,8 @@ var docReady = () => {
             var cartMenuItem = $(".cart");
             cartMenuItem.html("Cart (" + numItems + ")");
             console.log(cartMenuItem);
+
+            checkOutButton.show();
         }
         // add the html to the table
         cartTable.append(html);
