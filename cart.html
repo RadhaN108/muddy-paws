@@ -30,20 +30,23 @@
     </header>
     <section class="cart-panel">
       <h2>Your Cart</h2>
-      <ul class="items">
-        <li>
-          <div class="cart-product-image" style="background-image: url(img/cat-harness0.jpg)"></div>
-          <h3>Item number 1</h3>
-          <p>Color of Item</p>
-          <p>Size of Item</p>
-          <p>Quantity</p>
-          <div>
-            <a href="#">modify item</a>
-            <a href="#">remove item</a>
-          </div>
-          </div>
-        </li>
-      </ul>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Details</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+        <tr class="line-item">
+          <td class="image">
+            <div class="cart-product-image" style="background-image: url(img/cat-harness0.jpg)"></div>
+            <h3>Item number 1</h3>
+          </td>
+          <td><p>Color of Item</p><p>Size of Item</p></td>
+          <td><p>Quantity</p></td>
+          <td><a href="#">modify item</a><a href="#">remove item</a></td>
+        </tr>
+      </table>
       <a href="#" class="button">Check Out</a>
     </section>
 
