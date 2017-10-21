@@ -428,7 +428,7 @@ input[type=submit] {
 
 /*********** CART ***************/
 .cart-panel {
-    height: 700px;
+    min-height: 700px;
     padding: 40px 50px;
 }
 
@@ -448,6 +448,7 @@ input[type=submit] {
 
 .cart-panel table td {
     padding: 20px;
+;
 }
 
 .cart-panel table tr td:first-child {
@@ -464,11 +465,10 @@ input[type=submit] {
     line-height: 16px;
 }
 
-.cart-panel table .line-item {
-    border: 1px solid black;
+.cart-panel table .item {
+    border: 1px solid grey;
+    border-spacing: 10px;
 }
-
-
 
 .cart-product-image {
     background: center no-repeat;
@@ -483,7 +483,7 @@ input[type=submit] {
     border: 0;
     display: inline-block;
     padding: 15px 50px;
-    margin: 40px 500px 0px;
+    margin: 40px auto 0px;
     color: black;
     background-color: #F7EA46;
     border-radius: 5px;
