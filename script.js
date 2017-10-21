@@ -43,12 +43,6 @@ function addItem(name, price, color, size, count) {
 ///// RUNS WHEN DOC IS READY  //////
 var docReady = () => {
 
-    ///// cart menu item has # of items
-    var cartMenuItem = $(".cart");
-
-
-
-
     ///// show items in cart
     // get the cartTable on the cart page
     var cartTable = $("#cart-table");
