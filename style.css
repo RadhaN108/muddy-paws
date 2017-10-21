@@ -432,14 +432,22 @@ input[type=submit] {
     padding: 40px 50px;
 }
 
-.cart-panel ul li{
+.cart-panel table {
     width: 90%;
     height: 200px;
     padding: 30px;
+}
+
+.cart-panel table tr th {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.cart-panel table tr td:first-child {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black ;
+    justify-content: space-around;
 }
 
 .cart-product-image {
@@ -449,11 +457,6 @@ input[type=submit] {
     height: 100px;
 }
 
-
-.cart-panel ul li div {
-    display: flex;
-    flex-direction: column;
-}
 
 .cart-panel .button {
     border: 0;
