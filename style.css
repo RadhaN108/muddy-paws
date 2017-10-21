@@ -424,8 +424,37 @@ input[type=submit] {
 
 .input[type=submit]:hover {
     opacity: 0.7;
-
 }
+
+/*********** CART ***************/
+.cart-panel {
+    height: 700px;
+    padding: 40px 50px;
+}
+
+.cart-panel ul li{
+    width: 90%;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black ;
+}
+
+.cart-product-image {
+    background: center no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+
+.cart-panel ul li div {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /*********** ABOUT ***************/
 .about {
