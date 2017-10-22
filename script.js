@@ -9,9 +9,6 @@ function ready(docReady) {
 ///// VARIABLES  //////
 // defines the cart variable (array), pulls from local Storage if available
 var cart = JSON.parse(localStorage.getItem('cart')) || [];
-// number of items in cart
-var numItems = cart.length;
-
 
 
 ///// FUNCTIONS  //////
@@ -39,6 +36,22 @@ function addItem(name, price, color, size, count) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// updating number in Cart Menu
+function updateCartMenu() {
+    var cartMenuItem = $(".cart");
+    if (cart.length == 0) {
+        cartMenuItem.html("Cart");
+    } else {
+        cartMenuItem.html("Cart (" + cart.length + ")");
+        console.log(cartMenuItem);
+    }
+}
+
+// checking if cart is empty to hide unnecessary cart elements
+function hideCartElements() {
+    $(".check-out").remove();
+    $("#cart-table").remove();
+}
 
 ///// RUNS WHEN DOC IS READY  //////
 var docReady = () => {
@@ -46,14 +59,11 @@ var docReady = () => {
     ///// show items in cart
     // get the cartTable on the cart page
     var cartTable = $("#cart-table");
-    var checkOutButton = $(".check-out");
-    var html = "";
 
+    var html = "";
     // if there's no items in the cart, don't do anything
-    if (numItems == 0) {
-        console.log('cart is empty');
-        checkOutButton.hide();
-        cartTable.hide();
+    if (cart.length == 0) {
+        hideCartElements();
     } else { // if there are items in the cart, then add the rows to the cart page
         for (var i in cart) {
             // get data for each line item
@@ -63,19 +73,25 @@ var docReady = () => {
             var size = cart[i].size;
             var count = cart[i].count;
             // append it to the html to be added, 1 row for each line item
-            html += "<tr class='item'><td><div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg)''></div><h3>" + name +"</h3></td><td><p>Color:  " + color + "</p><p>Size:  " + size + "</p></td><td><p>" + count + "</p></td><td><a href='#'>modify item</a><a href='#'>remove item</a></td></tr>";
-
-            // update the number of items in the cart menu item
-            var cartMenuItem = $(".cart");
-            cartMenuItem.html("Cart (" + numItems + ")");
-            console.log(cartMenuItem);
-
-            checkOutButton.show();
+            html += "<tr class='item'><td><div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg)''></div><h3>" + name +"</h3></td><td><p>Color:  " + color + "</p><p>Size:  " + size + "</p></td><td><p>" + count + "</p></td><td><a href='#'>modify item</a><a href='#' class='remove'>remove item</a></td></tr>";
+            updateCartMenu();
+            $(".check-out").show();
         }
         // add the html to the table
         cartTable.append(html);
     }
 
+    // when user clicks to remove a product...
+    $(".remove").on("click", function(e) {
+        var index = $(this).parent().parent().index(".item");
+        $(this).parent().parent().remove();
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartMenu();
+        if (cart.length == 0) {
+            hideCartElements();
+        };
+    });
 
     ////////////// PRODUCT PAGE JAVASCRIPT /////////////
 
@@ -86,8 +102,6 @@ var docReady = () => {
         var price = $(this).attr("data-price");
         var color = $("select#color").val();
         var size = $("select#size").val();
-        // console.log(name, price, color, size);
-        // add item to the cart using the addItem function
         addItem(name, price, color, size, 1);
     });
 
