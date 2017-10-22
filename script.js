@@ -84,11 +84,12 @@ var docReady = () => {
             var color = cart[i].color;
             var size = cart[i].size;
             var count = cart[i].count;
+            var img = cart[i].image;
             // append it to the html to be added, 1 row for each line item
             rowsHtml += "\
             <tr class='item'>\
                 <td>\
-                    <div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg')>\
+                    <div class='cart-product-image' style='background-image: url(img/" + img +")'>\
                     </div>\
                     <h3>" + name +"</h3>\
                 </td>\
@@ -97,10 +98,9 @@ var docReady = () => {
                     <p>Size:  " + size + "</p>\
                 </td>\
                 <td>\
-                    <p>" + count + "</p>\
+                    <input class='quantity form-control' type='number' value=" + count + ">\
                 </td>\
                 <td>\
-                    <a href='#'>modify item</a>\
                     <a href='#' class='remove'>remove item</a>\
                 </td>\
             </tr>";
