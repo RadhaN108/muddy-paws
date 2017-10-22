@@ -41,6 +41,7 @@ function updateCartMenu() {
         var cartQuant = 0;
         for (var i in cart) {
             cartQuant += cart[i].count;
+            cartQuant = parseInt(cartQuant);
         }
         // update the cart menu item html
         cartMenuItem.html("Cart (" + cartQuant + ")");
@@ -54,6 +55,8 @@ function hideCartElements() {
     $(".check-out").remove();
     // hide cart table
     $("#cart-table").remove();
+    // show empty cart item
+    $(".empty-cart").show();
 }
 
 // change display image on the
@@ -62,6 +65,9 @@ function changeDisplayImg(path) {
     $(".display-image").css("background-image", "url(img/" + path + ")");
     $(".thumbnails").children().children().removeClass("active");
 }
+
+// remove item from cart
+
 
 ///// WHEN DOC IS READY... //////////////////
 var docReady = () => {
@@ -98,7 +104,7 @@ var docReady = () => {
                     <p>Size:  " + size + "</p>\
                 </td>\
                 <td>\
-                    <input class='quantity form-control' type='number' value=" + count + ">\
+                    <input id='quantity' type='number' min='1' value=" + count + " required>\
                 </td>\
                 <td>\
                     <a href='#' class='remove'>remove item</a>\
@@ -109,6 +115,8 @@ var docReady = () => {
         cartTable.append(rowsHtml);
         // show the check-out button
         $(".check-out").show();
+        // hide empty cart state
+        $(".empty-cart").hide();
     }
 
     // when the remove button is clicked...
@@ -121,6 +129,16 @@ var docReady = () => {
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
         // update the cart menu item with current products
+        updateCartMenu();
+    });
+
+    // when the quantity is changed...
+    $("#quantity").bind('keyup mouseup', function() {
+        var newCount = $(this).val();
+        var index = $(this).parent().parent().index(".item");
+        cart[index].count = newCount;
+        var updatedCount = cart[index].count;
+        localStorage.setItem('cart', JSON.stringify(cart));
         updateCartMenu();
     });
 

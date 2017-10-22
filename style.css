@@ -501,6 +501,19 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.empty-cart {
+    width: 80%;
+    height: 120px;
+    background-color: lightgrey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.empty-cart a {
+    text-decoration: underline;
+}
 
 /*********** ABOUT ***************/
 .about {
