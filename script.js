@@ -78,7 +78,7 @@ function changeDisplayImg(path) {
 function disableWishlist(name) {
     var exists = false;
     for (var i in wishlist) {
-        if (wishlist[i].name) {
+        if (wishlist[i].name == name) {
             exists = true;
             $(".wishlist").text("Wishlist Item!");
             $(".wishlist").css('text-decoration', 'none');
@@ -163,9 +163,31 @@ var docReady = () => {
         updateCartMenu();
     });
 
+    // get the wishlist ul, creat an html element
+    var wishlistList = $("#wishlist-list")
+    var html = '';
+    // if there's no items in the wishlist, hide wishlist panel
+    if (wishlist.length == 0) {
+        $(".wishlist-panel").hide();
+    } else { // otherwise,  if the wishlist has items
+        for (var i in wishlist) {
+            // get data for each line item
+            var name = wishlist[i].name;
+            var price = wishlist[i].price;
+            var path = wishlist[i].path;
+            // build the li elements
+            var li = "<li><h3>" + name + ", $" + price + " </h3>  <a href='" + path + "'> View </a> <a class='remove-wishlist'> Remove </a></li>";
+            // add the li element to the current html variable
+            html += li;
+        }
+    }
+    // append html to the wishlist
+    wishlistList.append(html);
+
+
     //////// PRODUCT PAGE /////////
     // disable wishlist for any item that's already on wishlist
-    disableWishlist();
+    disableWishlist($("#product").attr("data-name"));
 
     // when user clicks on 'Add to Cart'...
     $("#product").submit(function(e) {
@@ -187,6 +209,7 @@ var docReady = () => {
         var path = location.pathname.split('/').slice(-1)[0];
         // add to the wishlist array
         addWishlistItem(name, price, path);
+        disableWishlist(name);
 
     });
 

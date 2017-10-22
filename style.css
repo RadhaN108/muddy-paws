@@ -441,9 +441,11 @@ input[type=submit] {
     font-size: 12px;
 }
 
+
+
 /*********** CART ***************/
 .cart-panel {
-    min-height: 700px;
+    min-height: 500px;
     padding: 40px 50px;
 }
 
@@ -501,6 +503,26 @@ input[type=submit] {
 .cart-panel input[type=number]::-webkit-inner-spin-button {
   width: 20px;
   height: 30px;
+}
+
+.wishlist-panel {
+    min-height: 200px;
+    padding: 40px 50px;
+}
+
+.wishlist-panel li {
+    margin-left: 20px;
+}
+
+.wishlist-panel li h3,
+.wishlist-panel li a {
+    display:inline;
+    margin-right: 15px;
+}
+
+.wishlist-panel li a {
+    font-size: 12px;
+    text-decoration: underline;
 }
 
 /* style checkout button */
