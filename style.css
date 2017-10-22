@@ -391,6 +391,7 @@ select {
     position: relative;
     margin: 20px 0px;
     display: block;
+    width: 150px;
     padding: 10px 70px 10px 13px;
     max-width: 100%; height: auto;
     border: 1px solid #e3e3e3;
@@ -432,6 +433,7 @@ input[type=submit] {
     padding: 40px 50px;
 }
 
+/* styling cart table */
 .cart-panel table {
     width: 80%;
     border-collapse: collapse;
@@ -466,6 +468,7 @@ input[type=submit] {
     border-spacing: 10px;
 }
 
+/* style product image in cart */
 .cart-product-image {
     background: center no-repeat;
     background-size: cover;
@@ -474,6 +477,7 @@ input[type=submit] {
     margin-right: 30px;
 }
 
+/* style quantity input element in cart */
 .cart-panel input[type=number] {
   line-height: 27px;
   width: 50px;
@@ -485,6 +489,7 @@ input[type=submit] {
   height: 30px;
 }
 
+/* style checkout button */
 .cart-panel .check-out {
     display: inline-block;
     padding: 15px 50px;
@@ -501,6 +506,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
+/* style empty cart block */
 .empty-cart {
     width: 80%;
     height: 120px;
