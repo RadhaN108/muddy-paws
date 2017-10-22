@@ -40,8 +40,7 @@ function updateCartMenu() {
         // otherwise, find the quantity of products in the cart
         var cartQuant = 0;
         for (var i in cart) {
-            cartQuant += cart[i].count;
-            cartQuant = parseInt(cartQuant);
+            cartQuant += parseInt(cart[i].count);
         }
         // update the cart menu item html
         cartMenuItem.html("Cart (" + cartQuant + ")");
@@ -104,7 +103,7 @@ var docReady = () => {
                     <p>Size:  " + size + "</p>\
                 </td>\
                 <td>\
-                    <input id='quantity' type='number' min='1' value=" + count + " required>\
+                    <input class='quantity' type='number' min='1' value=" + count + " required>\
                 </td>\
                 <td>\
                     <a href='#' class='remove'>remove item</a>\
@@ -133,11 +132,13 @@ var docReady = () => {
     });
 
     // when the quantity is changed...
-    $("#quantity").bind('keyup mouseup', function() {
+    $(".quantity").bind('keyup mouseup', function() {
         var newCount = $(this).val();
         var index = $(this).parent().parent().index(".item");
-        cart[index].count = newCount;
+        i = parseInt(index);
+        cart[i].count = newCount;
         var updatedCount = cart[index].count;
+        console.log(i, newCount, updatedCount);
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartMenu();
     });
