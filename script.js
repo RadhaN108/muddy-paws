@@ -163,7 +163,7 @@ var docReady = () => {
         updateCartMenu();
     });
 
-    // get the wishlist ul, creat an html element
+    // get the wishlist ul, create an html element
     var wishlistList = $("#wishlist-list")
     var html = '';
     // if there's no items in the wishlist, hide wishlist panel
@@ -183,6 +183,20 @@ var docReady = () => {
     }
     // append html to the wishlist
     wishlistList.append(html);
+
+    // remove a wishlist item when 'remove' is clicked
+    $(".remove-wishlist").on("click", function(e) {
+        // get the index of the li element
+        var index = $(this).parent().index();
+        // remove the li element
+        $(this).parent().parent().remove();
+        // remove the row from the cart array and update the local storage
+        wishlist.splice(index, 1);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        if (wishlist.length == 0) {
+            $(".wishlist-panel").hide();
+        }
+    });
 
 
     //////// PRODUCT PAGE /////////
