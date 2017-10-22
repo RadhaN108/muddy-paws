@@ -219,6 +219,12 @@ nav a:hover, .back-bar a:hover {
     padding: 10px;
 }
 
+.stories .details a div {
+    display: flex;
+    align-items: ;
+    padding-top; 5px;
+}
+
 .stories a {
     display: inline-block;
     padding: 15px;
@@ -227,6 +233,7 @@ nav a:hover, .back-bar a:hover {
 
 .stories a:hover {
     border: 3px solid #F7EA46;
+    background: ;
 }
 
 /************ CTA ************/
@@ -265,7 +272,6 @@ nav a:hover, .back-bar a:hover {
 }
 
 .cta ul li a:hover {
-
     background: black;
     color: #F7EA46;
 }
