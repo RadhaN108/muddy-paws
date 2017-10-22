@@ -1,11 +1,3 @@
-function ready(docReady) {
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-    docReady();
-  } else {
-    document.addEventListener('DOMContentLoaded', docReady);
-  }
-}
-
 ///// VARIABLES  //////////////////
 // defines the cart variable (array), pulls from local Storage if available
 var cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -14,9 +6,9 @@ var cart = JSON.parse(localStorage.getItem('cart')) || [];
 ///// FUNCTIONS  //////////////////
 // Adds a product to the current
 // cart array in local storage
-function addItem(name, price, color, size, count) {
+function addItem(name, price, color, size, count, image) {
     // define item variable
-    var item = {name: name, price: price, color: color, size: size, count: count};
+    var item = {name: name, price: price, color: color, size: size, count: count, image: image};
     // loop through all existing items in cart, and if the item exists, the +1 to item count
     var exists = false;
     for (var i in cart) {
@@ -72,6 +64,7 @@ var docReady = () => {
     //////// CART /////////
     // get the table on the cart page and create an empty html var
     var cartTable = $("#cart-table");
+    var row = $('<td></td>');
     var rowsHtml = "";
     // if there's no items in the cart, hide the checkout button and table
     if (cart.length == 0) {
@@ -85,7 +78,25 @@ var docReady = () => {
             var size = cart[i].size;
             var count = cart[i].count;
             // append it to the html to be added, 1 row for each line item
-            rowsHtml += "<tr class='item'><td><div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg)''></div><h3>" + name +"</h3></td><td><p>Color:  " + color + "</p><p>Size:  " + size + "</p></td><td><p>" + count + "</p></td><td><a href='#'>modify item</a><a href='#' class='remove'>remove item</a></td></tr>";
+            rowsHtml += "\
+            <tr class='item'>\
+                <td>\
+                    <div class='cart-product-image' style='background-image: url(img/cat-harness0.jpg')>\
+                    </div>\
+                    <h3>" + name +"</h3>\
+                </td>\
+                <td>\
+                    <p>Color:  " + color + "</p>\
+                    <p>Size:  " + size + "</p>\
+                </td>\
+                <td>\
+                    <p>" + count + "</p>\
+                </td>\
+                <td>\
+                    <a href='#'>modify item</a>\
+                    <a href='#' class='remove'>remove item</a>\
+                </td>\
+            </tr>";
         }
         // add the html rows to the table
         cartTable.append(rowsHtml);
@@ -115,11 +126,12 @@ var docReady = () => {
         var price = $(this).attr("data-price");
         var color = $("select#color").val();
         var size = $("select#size").val();
+        var image = $("#color option:selected").attr("data-image");
         // add item to the cart array
-        addItem(name, price, color, size, 1);
+        addItem(name, price, color, size, 1, image);
     });
 }
 
-ready(docReady)
+$(document).ready(docReady)
 
 
