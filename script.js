@@ -56,6 +56,13 @@ function hideCartElements() {
     $("#cart-table").remove();
 }
 
+// change display image on the
+// product page and reseting active states
+function changeDisplayImg(path) {
+    $(".display-image").css("background-image", "url(img/" + path + ")");
+    $(".thumbnails").children().children().removeClass("active");
+}
+
 ///// WHEN DOC IS READY... //////////////////
 var docReady = () => {
     // show number of items in cart in the menu
@@ -129,6 +136,21 @@ var docReady = () => {
         var image = $("#color option:selected").attr("data-image");
         // add item to the cart array
         addItem(name, price, color, size, 1, image);
+    });
+
+    // when user selects a different color...
+    $("#color").change(function(e) {
+        // get the image path for that color option
+        var imagePath = $("#color option:selected").attr("data-image");
+        // change the display background to the right one
+        changeDisplayImg(imagePath);
+    });
+
+    // when user wants to switch between images...
+    $(".thumbnails").children().children().on("click", function(e) {
+        var imagePath = $(this).attr("img");
+        changeDisplayImg(imagePath);
+        $(this).addClass("active");
     });
 }
 
