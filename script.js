@@ -169,6 +169,7 @@ var docReady = () => {
     // if there's no items in the wishlist, hide wishlist panel
     if (wishlist.length == 0) {
         $(".wishlist-panel").hide();
+        $(".cart-panel").css('height', '620px');
     } else { // otherwise,  if the wishlist has items
         for (var i in wishlist) {
             // get data for each line item
@@ -195,6 +196,7 @@ var docReady = () => {
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
         if (wishlist.length == 0) {
             $(".wishlist-panel").hide();
+            $(".cart-panel").css('height', '620px');
         }
     });
 

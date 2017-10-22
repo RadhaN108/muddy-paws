@@ -445,7 +445,7 @@ input[type=submit] {
 
 /*********** CART ***************/
 .cart-panel {
-    min-height: 500px;
+    min-height: 450px;
     padding: 40px 50px;
 }
 
