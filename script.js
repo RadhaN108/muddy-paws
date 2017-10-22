@@ -21,7 +21,6 @@ function addItem(name, price, color, size, count, image) {
     // if item doesn't exist in cart, add new line item
     if(!exists) {
         cart.push(item);
-        console.log(cart);
     }
     // update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -138,7 +137,6 @@ var docReady = () => {
         i = parseInt(index);
         cart[i].count = newCount;
         var updatedCount = cart[index].count;
-        console.log(i, newCount, updatedCount);
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartMenu();
     });
