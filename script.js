@@ -80,7 +80,7 @@ function disableWishlist(name) {
     for (var i in wishlist) {
         if (wishlist[i].name == name) {
             exists = true;
-            $(".wishlist").text("Wishlist Item!");
+            $(".wishlist").text("This item's in your Wishlist!");
             $(".wishlist").css('text-decoration', 'none');
             $(".wishlist").off('click');
             break; // stop loop when item is found

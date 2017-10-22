@@ -440,8 +440,9 @@ input[type=submit] {
 
 /* add to wishlist button */
 .wishlist {
-    display: inline-block;
-    padding: 15px 64px;
+    display: block;
+    width: 220px;
+    padding: 15px 0px;
     text-decoration: underline;
     font-size: 12px;
 }
