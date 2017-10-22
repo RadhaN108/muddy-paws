@@ -1,6 +1,7 @@
 ///// VARIABLES  //////////////////
 // defines the cart variable (array), pulls from local Storage if available
 var cart = JSON.parse(localStorage.getItem('cart')) || [];
+var wishlist =JSON.parse(localStorage.getItem('wishlist')) || [];
 
 
 ///// FUNCTIONS  //////////////////
@@ -24,6 +25,14 @@ function addItem(name, price, color, size, count, image) {
     }
     // update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Adds a product (without specifics)
+// to a wishlist
+function addWishlistItem(name, price, path) {
+    var item = {name: name, price: price, path: path};
+    wishlist.push(item);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
 }
 
 // update the number of items in cart
@@ -55,16 +64,29 @@ function hideCartElements() {
     $("#cart-table").remove();
     // show empty cart item
     $(".empty-cart").show();
-}
+};
 
 // change display image on the
 // product page and reseting active states
 function changeDisplayImg(path) {
     $(".display-image").css("background-image", "url(img/" + path + ")");
     $(".thumbnails").children().children().removeClass("active");
-}
+};
 
-// remove item from cart
+// disable wishlist link if item
+// already in wishlist
+function disableWishlist(name) {
+    var exists = false;
+    for (var i in wishlist) {
+        if (wishlist[i].name) {
+            exists = true;
+            $(".wishlist").text("Wishlist Item!");
+            $(".wishlist").css('text-decoration', 'none');
+            $(".wishlist").off('click');
+            break; // stop loop when item is found
+        }
+    }
+};
 
 
 ///// WHEN DOC IS READY... //////////////////
@@ -142,6 +164,8 @@ var docReady = () => {
     });
 
     //////// PRODUCT PAGE /////////
+    // disable wishlist for any item that's already on wishlist
+    disableWishlist();
 
     // when user clicks on 'Add to Cart'...
     $("#product").submit(function(e) {
@@ -153,6 +177,17 @@ var docReady = () => {
         var image = $("#color option:selected").attr("data-image");
         // add item to the cart array
         addItem(name, price, color, size, 1, image);
+    });
+
+    // when a user clicks on 'Add to Wishlist'...
+    $(".wishlist").on('click', function(e) {
+        // get name, price, and path of the page
+        var name = $("#product").attr("data-name");
+        var price = $("#product").attr("data-price");
+        var path = location.pathname.split('/').slice(-1)[0];
+        // add to the wishlist array
+        addWishlistItem(name, price, path);
+
     });
 
     // when user selects a different color...

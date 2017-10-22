@@ -433,6 +433,14 @@ input[type=submit] {
     opacity: 0.7;
 }
 
+/* add to wishlist button */
+.wishlist {
+    display: inline-block;
+    padding: 15px 64px;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
 /*********** CART ***************/
 .cart-panel {
     min-height: 700px;
