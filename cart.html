@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset='UTF-8'/>
-    <title>Muddy Paws Cat Harness</title>
-    <!-- STYLES !-->
-    <link rel="stylesheet" href="style.css"/>
-    <!-- FONTS !-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <!-- JQUERY FILE !-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- JS FILE !-->
-    <script src="script.js"></script>
-    <!-- RESOURCES & REFERENCES!
-      Photos:
-        Ruffwear: https://ruffwear.com/
-        Wuf Collar: https://getwuf.com/
-        Whistle: https://www.whistle.com/
-        National Geographic - Adventures outside with your dog: http://www.nationalgeographic.com/adventure/lists/photos-adventures-outside-with-your-dog/
-      Some copy (i.e. About and Individual Products)
-        Ruffwear: https://ruffwear.com/
-        Whistle: https://www.whistle.com/
-    -->
+      <meta charset='UTF-8'/>
+      <title>Muddy Paws Cat Harness</title>
+      <!-- STYLES !-->
+      <link rel="stylesheet" href="style.css"/>
+      <!-- FONTS !-->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+      <!-- JQUERY FILE !-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- JS FILE !-->
+      <script src="script.js"></script>
+      <!-- RESOURCES & REFERENCES!
+        Photos:
+          Ruffwear: https://ruffwear.com/
+          Wuf Collar: https://getwuf.com/
+          Whistle: https://www.whistle.com/
+          National Geographic - Adventures outside with your dog: http://www.nationalgeographic.com/adventure/lists/photos-adventures-outside-with-your-dog/
+        Some copy (i.e. About and Individual Products)
+          Ruffwear: https://ruffwear.com/
+          Whistle: https://www.whistle.com/
+        -->
   </head>
   <body>
-   <header>
-      <nav>
-          <ul>
-              <li><a href="index.html"><img src="img/logo.png" alt="muddypaws-logo"/></a></li>
-              <li><a href="product-index.html">Products</a></li>
-              <li><a href="tails.html">Tails</a></li>
-              <li><a href="about.html">About</a></li>
-          </ul>
-          <ul>
-              <li><a href="cart.html" class="cart active">Cart</a></li>
-          </ul>
-      </nav>
-      <nav class="back-nav">
-          <a href="product-index.html"><h3>&lt;&lt; back to all products</h3></a>
-      </nav>
-    </header>
-    <section class="cart-panel">
-      <h2>Your Cart</h2>
-      <table id="cart-table">
-        <tr>
-          <th>Item</th>
-          <th>Details</th>
-          <th>Quantity</th>
-          <th></th>
-        </tr>
-        <!-- Line Items Inserted here !-->
-      </table>
-      <div class="empty-cart">
-        <h3>Oh no! Your cart is empty. </br><a href='product-index.html'>Click here to continue shopping</a>. </h3>
-      </div>
-      <a class="check-out">Checkout</a>
-    </section>
-    <section class="wishlist-panel">
-      <h2>Your Wishlist</h2>
-        <ul id="wishlist-list">
+      <header>
+            <!-- NAVIGATION !-->
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="img/logo.png" alt="muddypaws-logo"/></a></li>
+                    <li><a href="product-index.html">Products</a></li>
+                    <li><a href="tails.html">Tails</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <ul>
+                    <li><a href="cart.html" class="cart active">Cart</a></li>
+                </ul>
+            </nav>
+          <nav class="back-nav">
+              <a href="product-index.html"><h3>&lt;&lt; back to all products</h3></a>
+          </nav>
+      </header>
+      <!-- CART AREA !-->
+      <section class="cart-panel">
+          <h2>Your Cart</h2>
+          <table id="cart-table">
+              <tr>
+                  <th>Item</th>
+                  <th>Details</th>
+                  <th>Quantity</th>
+                  <th></th>
+              </tr>
+          <!-- Line Items Inserted here !-->
+          </table>
+          <div class="empty-cart">
+              <h3>Oh no! Your cart is empty. </br>
+                  <a href='product-index.html'>Click here to continue shopping</a>.
+              </h3>
+          </div>
+          <a class="check-out">Checkout</a>
+      </section>
+      <!-- WISHLIST AREA !-->
+      <section class="wishlist-panel">
+          <h2>Your Wishlist</h2>
+          <ul id="wishlist-list">
           <!--- Wishlist Items Go here !-->
-        </ul>
-    </section>
-    <footer>
-      <ul>
-        <li><a href="#">Fit Guide</a></li>
-        <li><a href="#">Shipping &amp; Returns</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </footer>
+          </ul>
+      </section>
+      <!-- FOOTER !-->
+      <footer>
+          <ul>
+          <li><a href="#">Fit Guide</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">FAQs</a></li>
+          </ul>
+      </footer>
   </body>
 </html>

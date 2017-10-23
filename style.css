@@ -457,9 +457,11 @@ input[type=submit] {
     padding: 20px 50px;
 }
 
+/* styling for the actual product being displayed */
 .related-item {
     margin: 20px 0px;
 }
+
 
 .related-item div {
     display: block;
@@ -484,6 +486,8 @@ input[type=submit] {
     background-size: cover;
 }
 
+/* styling so that the left and right arrows
+display properly and have hover state*/
 .related-products-panel .left-arrow,
 .related-products-panel .right-arrow  {
     display: block;
@@ -562,6 +566,7 @@ input[type=submit] {
   height: 30px;
 }
 
+/* style the wishlist panel */
 .wishlist-panel {
     min-height: 200px;
     padding: 40px 50px;

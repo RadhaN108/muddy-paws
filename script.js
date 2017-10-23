@@ -125,21 +125,21 @@ var docReady = () => {
             // append it to the html to be added, 1 row for each line item
             rowsHtml += "\
             <tr class='item'>\
-                <td>\
-                    <div class='cart-product-image' style='background-image: url(img/" + img +")'>\
-                    </div>\
-                    <h3>" + name +"</h3>\
-                </td>\
-                <td>\
-                    <p>Color:  " + color + "</p>\
-                    <p>Size:  " + size + "</p>\
-                </td>\
-                <td>\
-                    <input class='quantity' type='number' min='1' value=" + count + " required>\
-                </td>\
-                <td>\
-                    <a href='#' class='remove'>remove item</a>\
-                </td>\
+            <td>\
+            <div class='cart-product-image' style='background-image: url(img/" + img +")'>\
+            </div>\
+            <h3>" + name +"</h3>\
+            </td>\
+            <td>\
+            <p>Color:  " + color + "</p>\
+            <p>Size:  " + size + "</p>\
+            </td>\
+            <td>\
+            <input class='quantity' type='number' min='1' value=" + count + " required>\
+            </td>\
+            <td>\
+            <a href='#' class='remove'>remove item</a>\
+            </td>\
             </tr>";
         }
         // add the html rows to the table
