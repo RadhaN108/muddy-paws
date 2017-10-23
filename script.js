@@ -201,7 +201,7 @@ var docReady = () => {
         // get the index of the li element
         var index = $(this).parent().index();
         // remove the li element
-        $(this).parent().parent().remove();
+        $(this).parent().remove();
         // remove the row from the cart array and update the local storage
         wishlist.splice(index, 1);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
