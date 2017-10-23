@@ -253,6 +253,14 @@ var docReady = () => {
         changeDisplayImg(imagePath);
         $(this).addClass("active");
     });
+
+    //when user clicks on the left right arrows for the related products
+    $(".left-arrow").on('click',function() {
+        alert("Functionality is not available yet.");
+    });
+    $(".right-arrow").on('click',function() {
+        alert("Functionality is not available yet.");
+    });
 }
 
 $(document).ready(docReady)
