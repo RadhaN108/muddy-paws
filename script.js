@@ -1,7 +1,7 @@
 ///// VARIABLES  //////////////////
 // defines the cart variable (array), pulls from local Storage if available
 var cart = JSON.parse(localStorage.getItem('cart')) || [];
-var wishlist =JSON.parse(localStorage.getItem('wishlist')) || [];
+var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
 
 ///// FUNCTIONS  //////////////////
@@ -30,8 +30,18 @@ function addItem(name, price, color, size, count, image) {
 // Adds a product (without specifics)
 // to a wishlist
 function addWishlistItem(name, price, path) {
+    var exists = false;
     var item = {name: name, price: price, path: path};
-    wishlist.push(item);
+    // check if the item is already on the wish list.
+    for (var i in wishlist) {
+        if (wishlist[i].name === name) {
+            exists = true;
+        }
+    } // if it's not on the wish list than add it to the wishlist
+    if (!exists) {
+        wishlist.push(item);
+    }
+    // update the local storage
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
 }
 
@@ -82,6 +92,7 @@ function disableWishlist(name) {
             exists = true;
             $(".wishlist").text("This item's in your Wishlist!");
             $(".wishlist").css('text-decoration', 'none');
+            $(".wishlist").css('cursor', 'auto');
             $(".wishlist").off('click');
             break; // stop loop when item is found
         }
@@ -219,14 +230,13 @@ var docReady = () => {
 
     // when a user clicks on 'Add to Wishlist'...
     $(".wishlist").on('click', function(e) {
-        // get name, price, and path of the page
+        // get the name, price and path for the item
         var name = $("#product").attr("data-name");
         var price = $("#product").attr("data-price");
         var path = location.pathname.split('/').slice(-1)[0];
         // add to the wishlist array
         addWishlistItem(name, price, path);
         disableWishlist(name);
-
     });
 
     // when user selects a different color...
