@@ -33,38 +33,54 @@
     <section class="product-detail-panel">
         <div class="product-images">
             <div class="display-image" style="background-image: url(img/dog-harness-hero.jpg)"></div>
-            <ul>
-                <li><a href="#" class="active" style="background-image: url(img/dog-harness-hero.jpg)"></a></li>
-                <li><a href="#" style="background-image: url(img/dog-harness.png)"></a></li>
-                <li><a href="#" style="background-image: url(img/dog-harness-3.jpg)"></a></li>
-                <li><a href="#" style="background-image: url(img/dog-harness-4.jpg)"></a></li>
+            <ul class="thumbnails">
+                <li><a img= "dog-harness-hero.jpg" class="active" style="background-image: url(img/dog-harness-hero.jpg)"></a></li>
+                <li><a img="dog-harness.png" style="background-image: url(img/dog-harness.png)"></a></li>
+                <li><a img="dog-harness-3.jpg" style="background-image: url(img/dog-harness-3.jpg)"></a></li>
+                <li><a img="dog-harness-4.jpg" style="background-image: url(img/dog-harness-4.jpg)"></a></li>
             </ul>
         </div>
         <div class="product-desc">
             <h2>Dog Harness</h2>
             <h3>$48</h3>
             <p>The Doubleback Dog Harness is a strength-rated belay harness that opens up areas that were previously difficult for dogs to access, while providing an increased level of safety, comfort and convenience.</p>
-            <form>
-                <select name="size" required>
+            <form id="product" data-name="Dog Harness" data-price="48">
+                <select id="size" required>
                     <option value="" disabled selected>Select size</option>
-                    <option value="tiny">Tiny</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
+                    <option value="Tiny">Tiny</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <select name="color" required>
+                <select id="color" required>
                     <option value="" disabled selected>Select color</option>
-                    <option value="strawberry">Strawberry</option>
-                    <option value="blackberry">Blackberry</option>
-                    <option value="crazyberry">Crazyberry</option>
-                    <option value="camouflage">Camouflage</option>
-                    <option value="night moon">Night Moon</option>
-                    <option value="fire orange">Fire Orange</option>
+                    <option value="Strawberry" data-image="dog-harness.png">Strawberry</option>
+                    <option value="Blackberry" data-image="dog-harness.png">Blackberry</option>
+                    <option value="Crazyberry" data-image="dog-harness.png">Crazyberry</option>
+                    <option value="Camouflage" data-image="dog-harness.png">Camouflage</option>
+                    <option value="Night moon" data-image="dog-harness.png">Night Moon</option>
+                    <option value="Fire orange" data-image="dog-harness.png">Fire Orange</option>
                 </select>
                 <input type="Submit" value="Add to Cart"/>
             </form>
-
+            <a class="wishlist">Add to Wishlist </a>
         </div>
+    </section>
+    <section class="related-products-panel">
+        <a class="left-arrow" style="background-image: url(img/left-arrow.png)"></a>
+        <div>
+            <h3>Related Products</h3>
+            <div class="related-item">
+                <div style="background-image: url(img/pack-hero.jpg)"></div>
+                <div class="product-desc">
+                    <h2>Harness Pack</h2>
+                    <h3>$48</h3>
+                    <p>The Doubleback Dog Harness is a strength-rated belay harness that opens up areas that were previously difficult for dogs to access, while providing an increased level of safety, comfort and convenience. </p>
+                    <h3><a href="harness-pack.html">View Product</a></h3>
+                </div>
+            </div>
+        </div>
+        <a class="right-arrow" style="background-image: url(img/right-arrow.png)"></a>
     </section>
     <footer>
         <ul>

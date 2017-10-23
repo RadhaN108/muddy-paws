@@ -33,37 +33,54 @@
     <section class="product-detail-panel">
         <div class="product-images">
             <div class="display-image" style="background-image: url(img/pack-hero.jpg)"></div>
-            <ul>
-                <li><a href="#" class="active" style="background-image: url(img/pack-hero.jpg)"></a></li>
-                <li><a href="#" style="background-image: url(img/pack1.jpg)"></a></li>
-                <li><a href="#" style="background-image: url(img/pack2.jpg)"></a></li>
-                <li><a href="#" style="background-image: url(img/pack3.jpg)"></a></li>
+            <ul class="thumbnails">
+                <li><a img="pack-hero.jpg" class="active" style="background-image: url(img/pack-hero.jpg)"></a></li>
+                <li><a img="pack1.jpg" style="background-image: url(img/pack1.jpg)"></a></li>
+                <li><a img="pack2.jpg" style="background-image: url(img/pack2.jpg)"></a></li>
+                <li><a img="pack3.jpg" style="background-image: url(img/pack3.jpg)"></a></li>
             </ul>
         </div>
         <div class="product-desc">
             <h2>Harness Attachment</h2>
             <h3>$38</h3>
             <p>The Harness Attachement Pack is a sleek, low-profile hydration pack. Featuring two on-board, collapsible water bottles, dogs stay hydrated for the long haul. Two external stash pockets fit other adventure essentials.</p>
-            <form>
-                <select required>
+            <form id="product" data-name="Harness Attachment" data-price="38">
+                <select id="size" required>
                     <option value="" disabled selected>Select size</option>
-                    <option value="tiny">Tiny</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
+                    <option value="Tiny">Tiny</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
-                <select required>
+                <select id="color" required>
                     <option value="" disabled selected>Select color</option>
-                    <option value="strawberry">Strawberry</option>
-                    <option value="blackberry">Blackberry</option>
-                    <option value="crazyberry">Crazyberry</option>
-                    <option value="camouflage">Camouflage</option>
-                    <option value="night moon">Night Moon</option>
-                    <option value="fire orange">Fire Orange</option>
+                    <option value="Strawberry" data-image="pack1.jpg">Strawberry</option>
+                    <option value="Blackberry" data-image="pack1.jpg">Blackberry</option>
+                    <option value="Crazyberry" data-image="pack1.jpg">Crazyberry</option>
+                    <option value="Camouflage" data-image="pack1.jpg">Camouflage</option>
+                    <option value="Night moon" data-image="pack1.jpg">Night Moon</option>
+                    <option value="Fire orange" data-image="pack1.jpg">Fire Orange</option>
                 </select>
                 <input type="Submit" value="Add to Cart"/>
             </form>
+            <a class="wishlist">Add to Wishlist</a>
         </div>
+    </section>
+    <section class="related-products-panel">
+        <a class="left-arrow" style="background-image: url(img/left-arrow.png)"></a>
+        <div>
+            <h3>Related Products</h3>
+            <div class="related-item">
+                <div style="background-image: url(img/pack-hero.jpg)"></div>
+                <div class="product-desc">
+                    <h2>Harness Pack</h2>
+                    <h3>$48</h3>
+                    <p>The Doubleback Dog Harness is a strength-rated belay harness that opens up areas that were previously difficult for dogs to access, while providing an increased level of safety, comfort and convenience. </p>
+                    <h3><a href="harness-pack.html">View Product</a></h3>
+                </div>
+            </div>
+        </div>
+        <a class="right-arrow" style="background-image: url(img/right-arrow.png)"></a>
     </section>
     <footer>
         <ul>
